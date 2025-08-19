@@ -13,9 +13,6 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        <HeroSection />
-        <HeroSection />
-        <HeroSection />
         {/* <TabbedSection />
         <ServicesSection />
         <FeaturesSection />

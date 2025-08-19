@@ -78,14 +78,10 @@ export function EmailForm({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setEmail(e.target.value)
         }
-        className="flex-1 bg-background text-foreground border-border"
+        className="flex-1 bg-white text-black border-white"
         required
       />
-      <Button
-        type="submit"
-        disabled={isLoading}
-        className="bg-destructive hover:bg-destructive/90 text-destructive-foreground whitespace-nowrap"
-      >
+      <Button variant={"primary"} type="submit" disabled={isLoading}>
         {isLoading ? "Joining..." : buttonText}
       </Button>
     </form>
