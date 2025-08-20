@@ -25,7 +25,7 @@ export function HeroSection({ className }: HeroSectionProps) {
       title: "Healthcare professionals",
       image: "/images/healthcare.jpg",
       color: "bg-blue-500",
-      label: "Professionals",
+      label: "Healthcare Professionals",
     },
     {
       id: "recruiters",
@@ -84,9 +84,9 @@ export function HeroSection({ className }: HeroSectionProps) {
                       alt={userType.title}
                       className={`
                         w-full h-full object-cover transition-transform duration-500 hover:scale-105
-                        ${index === 0 ? "object-[calc(50%_-_50px)_center]" : ""}
+                        ${index === 0 ? "object-[calc(50%_-_55px)_center]" : ""}
                         ${index === 1 ? "object-[calc(50%_-_10px)_center]" : ""}
-                        ${index === 2 ? "object-[calc(50%_-_90px)_center]" : ""}
+                        ${index === 2 ? "object-[calc(50%_-_95px)_center]" : ""}
                       `}
                     />
 
@@ -103,14 +103,21 @@ export function HeroSection({ className }: HeroSectionProps) {
 
                     {/* Vertical label (only for collapsed cards) */}
                     {!isActive && (
-                      <div className="absolute inset-0 flex items-center justify-start transition-opacity duration-300 opacity-100">
-                        <div className="absolute left-5">
-                          <div className="flex items-center gap-3 -rotate-90">
-                            <span className="text-white font-semibold tracking-wide text-lg drop-shadow">
+                      <div className="">
+                        <div
+                          className={`
+                       absolute  flex items-center gap-3
+                        ${index === 0 ? "bottom-[120px] -left-[108px]" : ""}
+                        ${index === 1 ? "bottom-14 -left-10" : ""}
+                        ${index === 2 ? "bottom-12 -left-7" : ""}
+                      `}
+                        >
+                          <div className="relative flex items-center gap-3 -rotate-90">
+                            <span className="z-30 pl-3 pt-1 whitespace-nowrap text-white font-semibold tracking-wide text-lg drop-shadow">
                               {userType.label}
                             </span>
                             <span
-                              className={`${userType.color} w-14 h-14 rounded-sm shadow-lg`}
+                              className={`${userType.color} absolute top-0 left-0 w-12 h-14 shadow-lg`}
                             />
                           </div>
                         </div>
