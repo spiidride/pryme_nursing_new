@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { TabbedSection } from "@/components/tabbed-section";
 import { ServicesSection } from "@/components/services-section";
-// import { FeaturesSection } from "@/components/features-section";
+import { FeaturesSection } from "@/components/features-section";
 // import { FAQSection } from "@/components/faq-section";
 // import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,8 +15,8 @@ export default function HomePage() {
         <HeroSection />
         <TabbedSection />
          <ServicesSection />
-        {/* <FeaturesSection />
-        <FAQSection />  */}
+        <FeaturesSection />
+        {/* <FAQSection />  */}
       </main>
       {/* <Footer /> */}
       <Toaster />
