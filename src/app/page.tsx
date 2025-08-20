@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
-// import { TabbedSection } from "@/components/tabbed-section";
+import { TabbedSection } from "@/components/tabbed-section";
 // import { ServicesSection } from "@/components/services-section";
 // import { FeaturesSection } from "@/components/features-section";
 // import { FAQSection } from "@/components/faq-section";
@@ -13,8 +13,8 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-        {/* <TabbedSection />
-        <ServicesSection />
+        <TabbedSection />
+        {/* <ServicesSection />
         <FeaturesSection />
         <FAQSection /> */}
       </main>

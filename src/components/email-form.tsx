@@ -69,7 +69,7 @@ export function EmailForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`flex flex-col sm:flex-row gap-4 max-w-md ${className}`}
+      className={`flex flex-row gap-4 max-w-md ${className}`}
     >
       <Input
         type="email"
