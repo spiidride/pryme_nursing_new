@@ -136,7 +136,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                   </div>
                 </div>
                 <div className="w-full md:w-[55%] space-y-6 text-[#083244]">
-                  <h2 className="text-3xl lg:text-4xl font-bold leading-wider">
+                  <h2 className="text-3xl lg:text-4xl font-semibold leading-wider">
                     {content.healthcare.title}
                   </h2>
                   <p className="text-lg md:text-2xl ">
@@ -168,7 +168,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-12 items-center">
                 <div className="w-full md:w-[55%] space-y-6 text-[#4A0605]">
-                  <h2 className="text-3xl lg:text-4xl font-bold leading-wider">
+                  <h2 className="text-3xl lg:text-4xl font-semibold leading-wider">
                     {content.recruiters.title}{" "}
                   </h2>
                   <p className="text-lg md:text-2xl ">
@@ -214,7 +214,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
 
           <div
             ref={patientsRef}
-            className="rounded-t-3xl md:rounded-t-[52px] -mt-6 md:-mt-12 bg-[#DBF6D1] pt-4 lg:pt-18 pb-12 lg:pb-18"
+            className="rounded-t-3xl md:rounded-t-[52px] -mt-6 md:-mt-12 bg-[#DBF6D1] pt-4 lg:pt-18 pb-12 lg:pb-28"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center">
@@ -237,7 +237,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                   </div>
                 </div>
                 <div className="w-full md:w-[55%] space-y-6 text-[#0D290A]">
-                  <h2 className="text-3xl lg:text-4xl font-bold leading-wider">
+                  <h2 className="text-3xl lg:text-4xl font-semibold leading-wider">
                     {content.patients.title}
                   </h2>
                   <p className="text-lg md:text-2xl ">
