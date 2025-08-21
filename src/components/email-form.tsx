@@ -78,7 +78,7 @@ export function EmailForm({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setEmail(e.target.value)
         }
-        className="flex-1 bg-white text-black border-white"
+        className="flex-1 bg-white text-black border-[#E7E8EA]"
         required
       />
       <Button variant={"primary"} type="submit" disabled={isLoading}>
