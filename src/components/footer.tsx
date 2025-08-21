@@ -84,7 +84,7 @@ export default function LandingPage() {
               >
                 <button
                   onClick={() => setOpenFAQ(openFAQ === faq.id ? null : faq.id)}
-                  className="w-full flex justify-between items-center text-left px-4 py-4 hover:bg-primary-foreground/10 text-primary-foreground hover:text-primary-foreground"
+                  className="cursor-pointer w-full flex justify-between items-center text-left px-4 py-4 hover:bg-primary-foreground/10 text-primary-foreground hover:text-primary-foreground"
                 >
                   <span className="font-medium text-lg">{faq.question}</span>
                   {openFAQ === faq.id ? (
@@ -140,10 +140,27 @@ export default function LandingPage() {
             </div>
 
             <div className="lg:col-span-1">
-              <div className="space-y-2 text-primary-foreground/80">
-                <p>9701 Apollo Drive, Suite 100 Largo</p>
-                <p>MD 20774</p>
-                <p>1 (800) 317-6113, (202) 704-7853</p>
+              <div className="space-y-3 sm:space-y-4 text-primary-foreground/80">
+                <div className="flex flex-row gap-3 items-center">
+                  <Image
+                    src={"/svg/location.svg"}
+                    alt="Location Icon"
+                    width={24}
+                    height={24}
+                  />
+                  <p>9701 Apollo Drive, Suite 100 Largo MD 20774</p>
+                </div>
+
+                <div className="flex flex-row gap-3 items-center">
+                  <Image
+                    src={"/svg/phone.svg"}
+                    alt="Phone Icon"
+                    width={24}
+                    height={24}
+                    className="w-5 h-5"
+                  />
+                  <p>1 (800) 317-6113, (202) 704-7853</p>
+                </div>
               </div>
             </div>
 
