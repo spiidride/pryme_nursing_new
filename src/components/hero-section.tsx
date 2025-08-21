@@ -44,7 +44,7 @@ export function HeroSection({ className }: HeroSectionProps) {
   ];
 
   return (
-    <section className={`bg-[#083244] text-white py-16 lg:py-24 ${className}`}>
+    <section id="home" className={`bg-[#083244] text-white py-16 lg:py-24 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left */}

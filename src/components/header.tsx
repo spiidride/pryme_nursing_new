@@ -54,7 +54,9 @@ export function Header({ className }: HeaderProps) {
                 FAQs
               </Button>
             </nav>
-            <Button variant={"primary"}>Join waitlist</Button>
+            <Button variant={"primary"} onClick={() => scrollToSection("faqs")}>
+              Join waitlist
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -91,7 +93,11 @@ export function Header({ className }: HeaderProps) {
               >
                 FAQs
               </Button>
-              <Button variant="primary" className="w-full">
+              <Button
+                variant="primary"
+                onClick={() => scrollToSection("faqs")}
+                className="w-full"
+              >
                 Join waitlist
               </Button>
             </nav>
