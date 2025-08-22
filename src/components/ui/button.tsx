@@ -14,7 +14,7 @@ const buttonVariants = cva(
         secondary: "text-black-700 hover:text-black-900 bg-transparent",
       },
       size: {
-        default: "h-12 px-8 py-3",
+        default: "h-12 px-5 sm:px-8 py-3",
         sm: "h-9 px-3",
         lg: "h-11 px-8",
       },
