@@ -5,8 +5,10 @@ import type React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
-import { useToast } from "@/hooks/use-toast";
+import toast from "react-hot-toast";
 import axios from "axios";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 interface EmailFormProps {
   className?: string;
@@ -25,7 +27,6 @@ export function EmailForm({
 }: EmailFormProps) {
   const [email, setEmail] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,33 +35,20 @@ export function EmailForm({
     setIsLoading(true);
 
     try {
-      const response = await axios.post<{ message: string; email: string }>(
-        "/api/waitlist",
-        { email }
-      );
-      console.log(response);
-      toast({
-        title: "Success!",
-        description:
-          "You've been added to our waitlist. We'll be in touch soon!",
-        className: "bg-green-500 text-white border-green-600",
+      const response = await axios.post(`${BASE_URL}/waitlist`, {
+        email_address: email,
       });
+      toast.success(response?.data?.message);
 
       setEmail("");
       onSuccess?.(email);
     } catch (error) {
-      const errorMessage =
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again.";
-
-      toast({
-        title: "Error",
-        description: errorMessage,
-        variant: "destructive",
-      });
-
-      onError?.(error instanceof Error ? error : new Error(errorMessage));
+      if (axios.isAxiosError(error)) {
+        toast.error(error.response?.data?.message || "Something went wrong");
+        onError?.(error);
+      } else {
+        toast.error("Unexpected error");
+      }
     } finally {
       setIsLoading(false);
     }
