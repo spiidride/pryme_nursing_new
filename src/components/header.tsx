@@ -80,14 +80,14 @@ export function Header({ className }: HeaderProps) {
               <Button
                 variant="secondary"
                 onClick={() => scrollToSection("features")}
-                className="-ml-8 w-full justify-start text-foreground hover:text-primary"
+                className="-ml-4 sm:-ml-8 w-full justify-start text-foreground hover:text-primary"
               >
                 Features
               </Button>
               <Button
                 variant="secondary"
                 onClick={() => scrollToSection("faqs")}
-                className="-ml-8 w-full justify-start text-foreground hover:text-primary"
+                className="-ml-4 sm:-ml-8 w-full justify-start text-foreground hover:text-primary"
               >
                 FAQs
               </Button>

@@ -183,6 +183,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                           height={18}
                           src={"/svg/mark-red.svg"}
                           alt="Mark red Icon"
+                           className="w-[27px] h-[16px] sm:w-[30px] sm:h-[18px]"
                         />
                         <span className="text-lg md:text-2xl">{feature}</span>
                       </li>
@@ -252,6 +253,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                           height={18}
                           src={"/svg/mark-green.svg"}
                           alt="Mark Green Icon"
+                           className="w-[27px] h-[16px] sm:w-[30px] sm:h-[18px]"
                         />
                         <span className="text-lg md:text-2xl">{feature}</span>
                       </li>
