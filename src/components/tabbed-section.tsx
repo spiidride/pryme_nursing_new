@@ -96,7 +96,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                 <button
                   key={tab.id}
                   onClick={() => scrollToSection(tab.ref || null)}
-                  className={`leading-tight py-2 md:py-4 text-base sm:text-lg md:text-2xl  transition-all duration-300 text-[#070B11] hover:text-[#070B11]/80 hover:bg-gray-50 ${
+                  className={`leading-tight py-2 md:py-4 text-sm sm:text-lg md:text-2xl  transition-all duration-300 text-[#070B11] hover:text-[#070B11]/80 hover:bg-gray-50 ${
                     index === 0
                       ? "font-semibold border-b-4 border-[#070B11]"
                       : "font-normal"
@@ -150,6 +150,7 @@ export function TabbedSection({ className }: TabbedSectionProps) {
                           height={18}
                           src={"/svg/mark-teal.svg"}
                           alt="Mark Teal Icon"
+                          className="w-[27px] h-[16px] sm:w-[30px] sm:h-[18px]"
                         />
                         <span className="text-lg md:text-2xl">{feature}</span>
                       </li>

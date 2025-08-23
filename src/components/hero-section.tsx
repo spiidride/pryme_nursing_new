@@ -117,7 +117,7 @@ export function HeroSection({ className }: HeroSectionProps) {
                               {userType.label}
                             </span>
                             <span
-                              className={`${userType.color} absolute top-0 left-0 w-12 h-14 shadow-lg`}
+                              className={`${userType.color} absolute top-0 left-0 w-10 h-12 sm:w-12 sm:h-14 shadow-lg`}
                             />
                           </div>
                         </div>

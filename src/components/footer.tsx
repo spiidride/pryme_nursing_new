@@ -52,7 +52,7 @@ export default function LandingPage() {
     <main className="bg-[#1B2736] text-[#FFFFFF] rounded-t-3xl md:rounded-t-[52px]">
       <section
         id="faqs"
-        className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-20 text-center px-4"
+        className="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 sm:py-20 text-center px-4"
       >
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           We&apos;re Growing Fast
@@ -63,7 +63,7 @@ export default function LandingPage() {
         </p>
         <div
           id="waitlist"
-          className="flex justify-center gap-2 max-w-md mx-auto"
+          className="flex flex-col justify-center gap-2 max-w-lg mx-auto"
         >
           <EmailForm />
         </div>

@@ -57,7 +57,7 @@ export function EmailForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`flex flex-row gap-4 max-w-md ${className}`}
+      className={`flex flex-col sm:flex-row gap-4 ${className}`}
     >
       <Input
         type="email"
@@ -66,7 +66,7 @@ export function EmailForm({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setEmail(e.target.value)
         }
-        className="w-fit sm:w-[300px] flex-1 bg-white text-black border-[#E7E8EA]"
+        className="w-full sm:w-[300px] bg-white text-black border-[#E7E8EA]"
         required
       />
       <Button variant={"primary"} type="submit" disabled={isLoading}>
