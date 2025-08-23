@@ -25,11 +25,7 @@ interface ContentData {
   patients: ContentSection;
 }
 
-interface TabbedSectionProps {
-  className?: string;
-}
-
-export function TabbedSection({ className }: TabbedSectionProps) {
+export function TabbedSection() {
   const healthcareRef = useRef<HTMLDivElement>(null);
   const recruitersRef = useRef<HTMLDivElement>(null);
   const patientsRef = useRef<HTMLDivElement>(null);
