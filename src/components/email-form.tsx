@@ -1,14 +1,15 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import toast from "react-hot-toast";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 interface EmailFormProps {
   className?: string;
@@ -35,20 +36,24 @@ export function EmailForm({
     setIsLoading(true);
 
     try {
-      const response = await axios.post(`${BASE_URL}/waitlist`, {
-        email_address: email,
-      });
-      toast.success(response?.data?.message);
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        { email_address: email },
+        userID
+      );
 
-      setEmail("");
-      onSuccess?.(email);
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        toast.error(error.response?.data?.message || "Something went wrong");
-        onError?.(error);
+      if (result.status === 200) {
+        toast.success("Successfully joined waitlist!");
+        setEmail("");
+        onSuccess?.(email);
       } else {
-        toast.error("Unexpected error");
+        throw new Error("Failed to send email.");
       }
+    } catch (err) {
+      const error = err as Error;
+      toast.error(error.message || "Something went wrong");
+      onError?.(error);
     } finally {
       setIsLoading(false);
     }
@@ -69,7 +74,7 @@ export function EmailForm({
         className="w-full sm:w-[300px] bg-white text-black border-[#E7E8EA]"
         required
       />
-      <Button variant={"primary"} type="submit" disabled={isLoading}>
+      <Button variant="primary" type="submit" disabled={isLoading}>
         {isLoading ? "Joining..." : buttonText}
       </Button>
     </form>

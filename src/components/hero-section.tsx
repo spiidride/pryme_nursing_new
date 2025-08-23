@@ -55,7 +55,7 @@ export function HeroSection({ className }: HeroSectionProps) {
               </h1>
               <p className="text-xl text-primary-foreground/80 max-w-lg">
                 Join Pryme Nursing and connect healthcare professionals,
-                agencies, and patients seamlessly.
+                hospitals, and patients seamlessly.
               </p>
             </div>
             <EmailForm />
