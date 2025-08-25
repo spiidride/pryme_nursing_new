@@ -50,13 +50,21 @@ export function EmailForm({
         toast.success("Successfully joined waitlist!");
         setEmail("");
         onSuccess?.(email);
+
+        // 🔥 trigger update for WaitlistCounter
+        if (typeof window !== "undefined") {
+          localStorage.setItem("waitlist-updated", Date.now().toString());
+          window.dispatchEvent(new Event("storage")); // force fire
+        }
       } else {
         throw new Error("Failed to subscribe, kindly retry.");
       }
     } catch (err) {
       const error = err as AxiosError<{ message?: string }>;
       const message =
-        error.response?.data?.message || error.message || "Something went wrong";
+        error.response?.data?.message ||
+        error.message ||
+        "Something went wrong";
 
       toast.error(message);
       onError?.(error);

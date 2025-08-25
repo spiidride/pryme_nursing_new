@@ -28,7 +28,7 @@ export function ServicesSection() {
         {/* Header */}
         <div className="text-[#0D290A] text-center md:text-left mb-12 flex flex-col md:flex-row gap-5 md:gap-10">
           <h2 className="leading-wider w-full md:w-[40%] text-3xl lg:text-4xl font-semibold text-foreground">
-            We provide at home health care services
+            We provide at-home health care services
           </h2>
           <p className="w-full md:w-[60%] text-lg md:text-2xl mx-auto">
             Our agency provide health care services to health care patients in
