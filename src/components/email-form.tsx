@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import axios, { AxiosError } from "axios";
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
 const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
@@ -44,15 +46,19 @@ export function EmailForm({
       );
 
       if (result.status === 200) {
+        await axios.post(`${BASE_URL}/waitlist`, { email_address: email });
         toast.success("Successfully joined waitlist!");
         setEmail("");
         onSuccess?.(email);
       } else {
-        throw new Error("Failed to send email.");
+        throw new Error("Failed to subscribe, kindly retry.");
       }
     } catch (err) {
-      const error = err as Error;
-      toast.error(error.message || "Something went wrong");
+      const error = err as AxiosError<{ message?: string }>;
+      const message =
+        error.response?.data?.message || error.message || "Something went wrong";
+
+      toast.error(message);
       onError?.(error);
     } finally {
       setIsLoading(false);

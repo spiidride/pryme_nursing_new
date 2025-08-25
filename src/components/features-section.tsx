@@ -46,7 +46,7 @@ export function FeaturesSection() {
           </h2>
           <p className="text-lg lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Pryme Nursing is the all-in-one platform that connects verified
-            healthcare professionals, agencies, and patients with tools that
+            healthcare professionals, hospitals, and patients with tools that
             make hiring, working, and getting care faster, safer, and easier.
           </p>
         </div>
