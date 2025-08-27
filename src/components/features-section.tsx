@@ -42,12 +42,15 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            We are building more than just a job board.
+            We are building more than just a healthcare job board.
           </h2>
           <p className="text-lg lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Pryme Nursing is the all-in-one platform that connects verified
             healthcare professionals, hospitals, and patients with tools that
             make hiring, working, and getting care faster, safer, and easier.
+            From Electronic Medical Records and attendance tracking to virtual
+            visits, video conferencing, and AI-powered ChatBot support
+            everything you need is in one place.
           </p>
         </div>
 
@@ -74,10 +77,11 @@ export function FeaturesSection() {
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Image
-                    width={24}
-                    height={24}
-                    src={feature.icon}
-                    alt={feature.title}/>
+                      width={24}
+                      height={24}
+                      src={feature.icon}
+                      alt={feature.title}
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">

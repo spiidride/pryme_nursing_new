@@ -23,7 +23,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section className="pt-4 lg:pt-18 pb-12 lg:pb-32 -mt-16 bg-[#E9EEF5] rounded-t-3xl md:rounded-t-[52px]">
+    <section className="pt-4 lg:pt-18 pb-12 lg:pb-32 -mt-6 md:-mt-16 bg-[#E9EEF5] rounded-t-3xl md:rounded-t-[52px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-[#0D290A] text-center md:text-left mb-12 flex flex-col md:flex-row gap-5 md:gap-10">
