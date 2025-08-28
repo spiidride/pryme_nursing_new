@@ -49,19 +49,19 @@ export function FeaturesSection() {
             healthcare professionals, hospitals, and patients with tools that
             make hiring, working, and getting care faster, safer, and easier.
             From{" "}
-            <span className="px-3 py-[3px] rounded-full bg-blue-100 text-blue-800 font-medium">
+            <span className="px-3 py-0.5 sm:py-[3px] rounded-full bg-blue-100 text-blue-800 font-medium">
               Electronic Medical Records
             </span>{" "}
             and{" "}
-            <span className="px-3 py-[3px] rounded-full bg-green-100 text-green-800 font-medium">
+            <span className="px-3 py-0.5 sm:py-[3px] rounded-full bg-green-100 text-green-800 font-medium">
               attendance tracking
             </span>{" "}
             to virtual visits,{" "}
-            <span className="px-3 py-[3px] rounded-full bg-purple-100 text-purple-800 font-medium">
+            <span className="px-3 py-0.5 sm:py-[3px] rounded-full bg-purple-100 text-purple-800 font-medium">
               video conferencing
             </span>
             , and AI-powered{" "}
-            <span className="px-3 py-[3px] rounded-full bg-pink-100 text-pink-800 font-medium">
+            <span className="px-3 py-0.5 sm:py-[3px] rounded-full bg-pink-100 text-pink-800 font-medium">
               ChatBot
             </span>{" "}
             support everything you need is in one place.
