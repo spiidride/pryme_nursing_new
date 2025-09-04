@@ -59,7 +59,7 @@ export default function LandingPage() {
         </h1>
         <p className="max-w-2xl mx-auto text-lg lg:text-2xl mb-8 text-[#EFEBFF]">
           Thousands of healthcare professionals, agencies, and patients have
-          already joined Pryme Nursing, and the numbers keep climbing every day.
+          already joined Pryme Nursing, and the numbers keep growing every day.
         </p>
         <div
           id="waitlist"
