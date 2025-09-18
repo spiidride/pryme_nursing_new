@@ -4,7 +4,8 @@ import { TabbedSection } from "@/components/tabbed-section";
 import { ServicesSection } from "@/components/services-section";
 import { FeaturesSection } from "@/components/features-section";
 import { WaitlistCounter } from "@/components/waitlist-counter";
-import { AudioSection } from "@/components/audio-section";
+// import { AudioSection } from "@/components/audio-section";
+import { VideoSection } from "@/components/video-section";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
 
@@ -16,7 +17,8 @@ export default function HomePage() {
         <HeroSection />
         <WaitlistCounter />
         <TabbedSection />
-        <AudioSection />
+        <VideoSection/>
+        {/* <AudioSection /> */}
         <ServicesSection />
         <FeaturesSection />
       </main>
