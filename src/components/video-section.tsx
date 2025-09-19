@@ -64,7 +64,7 @@ export function VideoSection() {
         {/* Right: Text */}
         <div className="space-y-6">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#083244]">
-            Pryme Nursing – Caring for your wellbeing
+            Pryme Nursing – Caring for your well-being
           </h2>
           <p className="text-lg md:text-2xl text-gray-700 leading-relaxed">
             At Pryme Nursing, we believe access to healthcare should be seamless
